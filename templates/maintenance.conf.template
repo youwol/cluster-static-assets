@@ -1,0 +1,31 @@
+server {
+	listen 80;
+	server_name maintenance maintenance.*;
+
+    root /usr/share/nginx/maintenance;
+    error_page 503 /;
+
+	location = / {
+		index index.html;
+	}
+
+	location = /index.html {
+	    ssi on;
+		internal;
+	}
+
+	location = /details.txt {
+	    internal;
+	}
+
+	location ^~ /static {
+		alias /usr/share/nginx/static-assets;
+		autoindex off;
+	}
+
+	location ^~ / {
+	    return 503;
+	}
+
+	include /etc/nginx/conf.d/common.inc;
+}

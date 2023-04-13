@@ -1,6 +1,6 @@
 body {
     justify-content: center;
-    background-image: url(https://gitlab.com/youwol/platform/-/raw/3dd42c636e4cc9f4adde454395f5093f33a306f6/packages/welcome-app/src/static/img/background.jpg?inline=false);
+    background-image: url(/static/styles/background.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
