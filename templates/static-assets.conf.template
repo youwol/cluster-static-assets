@@ -1,0 +1,9 @@
+server {
+	listen 80;
+	server_name static-assets static-assets.*;
+
+	root /usr/share/nginx/static-assets;
+	autoindex off;
+
+	include /etc/nginx/conf.d/common.inc;
+}

@@ -1,0 +1,22 @@
+server {
+	listen 80;
+	server_name default-route default-route.*;
+
+ 	root /usr/share/nginx/default-route;
+
+	location = / {
+		index index.html;
+	}
+
+	location = /index.html {
+	    ssi on;
+	    set $platform_host $PLATFORM_HOST;
+		internal;
+	}
+
+	location ^~ / {
+		return 404;
+	}
+
+	include /etc/nginx/conf.d/common.inc;
+}

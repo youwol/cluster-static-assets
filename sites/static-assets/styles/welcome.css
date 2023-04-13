@@ -1,0 +1,39 @@
+body {
+    justify-content: center;
+    background-image: url(https://gitlab.com/youwol/platform/-/raw/3dd42c636e4cc9f4adde454395f5093f33a306f6/packages/welcome-app/src/static/img/background.jpg?inline=false);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+div#container {
+    background: lightgray;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+div#logo_container {
+    display: flex;
+}
+
+div#text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+
+img#logo {
+    width: 200px;
+}
+
+div#message {
+    font-size: x-large;
+}
+
+div#details {
+    font-size: large;
+}

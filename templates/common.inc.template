@@ -1,0 +1,17 @@
+error_page 404 /404.html;
+
+location = /404.html {
+	alias /usr/share/nginx/errors/404.html;
+	internal;
+}
+
+error_page 403 /403.html;
+
+location = /403.html {
+	alias /usr/share/nginx/errors/403.html;
+	internal;
+}
+
+location = /favicon.ico {
+	alias /usr/share/nginx/static-assets/favicon_64x64.png;
+}
