@@ -14,14 +14,15 @@ server {
 		internal;
 	}
 
-	location = /details.txt {
-	    internal;
-	}
-
 	location ^~ /static {
 		alias /usr/share/nginx/static-assets;
 		autoindex off;
 	}
+
+    location /includes/ {
+    	alias /usr/share/nginx/includes/maintenance/;
+    	internal;
+    }
 
 	location ^~ / {
 	    return 503;
