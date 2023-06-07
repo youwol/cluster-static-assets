@@ -5,13 +5,7 @@ server {
  	root /usr/share/nginx/default-route;
 
 	location = / {
-		index index.html;
-	}
-
-	location = /index.html {
-	    ssi on;
-	    set $platform_host $PLATFORM_HOST;
-		internal;
+	    return 301 $scheme://$PLATFORM_HOST/applications/@youwol/platform/latest;
 	}
 
 	location ^~ / {
