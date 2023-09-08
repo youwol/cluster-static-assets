@@ -54,8 +54,8 @@ docker run \
   --rm \
   --publish 127.x.x.x:8080:80 \
   -e PLATFORM_HOST="example.com" \
-  -v ./templates:/etc/nginx/templates \
-  -v ./sites:/usr/share/nginx \
+  -v ${pwd}/templates:/etc/nginx/templates \
+  -v ${pwd}/sites:/usr/share/nginx \
   nginx
 ```
 
