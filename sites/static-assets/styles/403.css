@@ -1,39 +1,57 @@
 body {
-    justify-content: center;
-    background-image: url(/static/styles/background.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(38, 38, 38, 255);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 div#container {
-    background: darkred;
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 10%;
+  display: flex;
+  width: 70%;
+  height: 70%;
+  flex-direction: row;
+  contain: content;
+  align-items: center;
 }
 
 div#logo_container {
-    display: flex;
+  /*display: flex;*/
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 div#text_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  width: 100%;
+  align-items: flex-start;
+  color: white;
+}
+
+#text_container a {
+  text-decoration: none;
+  color: orange;
+}
+
+#text_container a:hover {
+  text-decoration: auto !important;
+  color: #dacfbb !important;
 }
 
 img#logo {
-    width: 200px;
+  width: 100%;
 }
 
 div#message {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 div#details {
-    font-size: large;
+  font-size: large;
 }
